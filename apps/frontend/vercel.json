@@ -1,0 +1,17 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "cd ../.. && npm run build --workspace=@arcade-ai/frontend",
+  "devCommand": "cd ../.. && npm run dev --workspace=@arcade-ai/frontend",
+  "installCommand": "cd ../.. && npm install",
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
+}

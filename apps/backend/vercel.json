@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "cd ../.. && npm run build --workspace=@arcade-ai/backend",
+  "devCommand": "cd ../.. && npm run dev --workspace=@arcade-ai/backend",
+  "installCommand": "cd ../.. && npm install",
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
